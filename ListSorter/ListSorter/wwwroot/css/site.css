@@ -1,0 +1,41 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.container {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 40px;
+    gap: 30px;
+}
+.hidden {
+    display: none;
+}
+.list {
+    width: 200px;
+    border: black solid 1px;
+    min-height: 200px;
+    list-style-type: none;
+}
+.lists {
+    display: flex;
+    column-gap: 30px;
+}

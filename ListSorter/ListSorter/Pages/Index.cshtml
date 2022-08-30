@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container">
+	<form class="sorting-form" >
+		<input type="file" name="file" class="file-uploader"/>
+		<select name="sortSelector">
+			<option value="asc">По возрастанию</option>
+			<option value="desc">По убыванию</option>
+			<option value="reverse">В обратном порядке</option>
+		</select>
+		<input class="hidden" name="tmpTxt" type="text"/>
+		<input class="sort-btn" type="submit" value="Сортировать"/>
+	</form>
+	<div class="lists">
+		<figure>
+			<figcaption>Изначальный список</figcaption>
+			<ul class="unsorted list">
+				@Html.Raw(ViewData["tmpText"])
+			</ul>
+		</figure>
+		<figure class="sorted">
+			<figcaption>Отсортированный список</figcaption>
+			<ul class="list">
+				@Html.Raw(ViewData["sortedData"])
+			</ul>
+		</figure>
+	</div>
+	
+</div>
